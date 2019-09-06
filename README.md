@@ -62,7 +62,7 @@ Usage of the plugin is so simple. Just import it then pass required props. Pleas
 **Example:**
 ```jsx
 import React from 'react'
-import TrelloClient from 'react-trello-client`
+import TrelloClient from 'react-trello-client'
 
 const App = () => {
     return(
@@ -102,7 +102,7 @@ If you disable the login button, its not necessary to declare button props. Even
 
 ```jsx
 import React from 'react'
-import TrelloClient from 'react-trello-client`
+import TrelloClient from 'react-trello-client'
 
 const App = () => {
     return(
