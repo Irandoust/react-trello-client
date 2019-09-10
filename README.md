@@ -1,7 +1,7 @@
 # What is React Trello Client?
 This is a simple and lightweight React plugin to have a clean Trello client without using jQuery or any other additional libraries.
 
-[![GitHub license](https://img.shields.io/github/license/Irandoust/react-trello-client)](https://github.com/Irandoust/react-trello-client/blob/master/LICENSE) ![npm](https://img.shields.io/npm/dw/react-trello-client) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Irandoust/react-trello-client) ![npm](https://img.shields.io/npm/v/react-trello-client) ![GitHub top language](https://img.shields.io/github/languages/top/Irandoust/react-trello-client) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Irandoust/react-trello-client) ![GitHub stars](https://img.shields.io/github/stars/irandoust/react-trello-client?style=social) ![GitHub followers](https://img.shields.io/github/followers/irandoust?label=Follow&style=social) ![Twitter Follow](https://img.shields.io/twitter/follow/ali_irandoust?style=social)
+[![GitHub license](https://img.shields.io/github/license/Irandoust/react-trello-client)](https://github.com/Irandoust/react-trello-client/blob/master/LICENSE) ![npm](https://img.shields.io/npm/dw/react-trello-client) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Irandoust/react-trello-client) ![npm](https://img.shields.io/npm/v/react-trello-client) ![GitHub top language](https://img.shields.io/github/languages/top/Irandoust/react-trello-client) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Irandoust/react-trello-client)
 
 ## Features  🔥
 
