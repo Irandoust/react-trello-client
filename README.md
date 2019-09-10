@@ -1,26 +1,33 @@
 # What is React Trello Client?
 This is a simple and lightweight React plugin to have a clean Trello client without using jQuery or any other additional libraries.
 
-[![GitHub license](https://img.shields.io/github/license/Irandoust/react-trello-client)](https://github.com/Irandoust/react-trello-client/blob/master/LICENSE) ![npm](https://img.shields.io/npm/dw/react-trello-client) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Irandoust/react-trello-client) ![npm](https://img.shields.io/npm/v/react-trello-client) ![GitHub top language](https://img.shields.io/github/languages/top/Irandoust/react-trello-client) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Irandoust/react-trello-client)
+[![GitHub license](https://img.shields.io/github/license/Irandoust/react-trello-client)](https://github.com/Irandoust/react-trello-client/blob/master/LICENSE) ![npm](https://img.shields.io/npm/dw/react-trello-client) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Irandoust/react-trello-client) ![npm](https://img.shields.io/npm/v/react-trello-client) ![GitHub top language](https://img.shields.io/github/languages/top/Irandoust/react-trello-client) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Irandoust/react-trello-client) ![GitHub stars](https://img.shields.io/github/stars/irandoust/react-trello-client?style=social) ![GitHub followers](https://img.shields.io/github/followers/irandoust?label=Follow&style=social) ![Twitter Follow](https://img.shields.io/twitter/follow/ali_irandoust?style=social)
 
 ## Features  🔥
 
 * Easy to use without confusion
 * Most client.js options as component props
-* Default login button with custom text and multiple Trello button styles
-* Option to disabling default button
-* Have Authorize on component load
-* Authorization box behavior controll (Popup or Redirect)
-* Control access permission scopes (Read, Write, Account information)
-* Set Expiration time available
+* Default login button with a custom text and multiple Trello button styles
+* Option to disable default button
+* Having Authorize on component load
+* Authorization box behavior control (Popup or Redirect)
+* Control over access permission scopes (Read, Write, Account information)
+* Setting expiration time available
 * Callback functions as props
 * Clean and well optimized code
 * Well documented options
 
 ## Install 💻
-Simply run the following command. You should install as a dependency by `--save` or `-S` flag.
+Simply run the following commands depending on which package manager you are using.
+
+Install via [NPM](https://www.npmjs.com/get-npm):
 ```sh
-npm i --save react-trello-client
+$ npm i react-trello-client
+```
+
+Install via [Yarn](https://yarnpkg.com/en/docs/install):
+```sh
+$ yarn add react-trello-client
 ```
 
 ## Props ⚙
@@ -52,7 +59,7 @@ Prop | Type | Required | Description | Example |
 **authorizeOnSuccess** | Function | Yes | A function to call after login is succeed | `authorizeOnSuccess={() => console.log('Login successful!')}`
 **authorizeOnError** | Function | Yes | A function to call after login is failed | `authorizeOnError={() => console.log('Login error!')}`
 **autoAuthorize** | Boolean | No | Authorization window will show up right after component is loaded. Default is `false` | `autoAuthorize={false}`
-**authorizeButton** | Boolean | No | If it's `true` Default login button with Trello styles will show. Default is `false` | `authorizeButton={true}`
+**authorizeButton** | Boolean | No | If it's `true` default login button with Trello styles will show. Default is `false` | `authorizeButton={true}`
 **buttonStyle** | String | No | Login button style. Available options are `metamorph` and `flat`. Default is `metamorph` | `buttonStyle="metamorph"`
 **buttonColor** | String | No | Login button style. Available options are `green`, `grayish-blue` and `light`. Default is `green` | `buttonColor="grayish-blue"`
 **buttonText** | String | No | The text to show on login button. Default is `Login with Trello` | `buttonText="Login with Trello"`
@@ -132,7 +139,7 @@ const App = () => {
 export default App
 ```
 
-## License
+## License 🔐
 
 React Trello Client is [MIT licensed](https://github.com/Irandoust/react-trello-client/blob/master/LICENSE).
 
