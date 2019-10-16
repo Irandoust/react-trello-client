@@ -6,7 +6,7 @@ This is a simple and lightweight React plugin to have a clean Trello client with
 ## Features  🔥
 
 * Easy to use without confusion
-* Most client.js options as component props
+* Most [client.js](https://developers.trello.com/docs/clientjs) options as component props
 * Default login button with a custom text and multiple Trello button styles
 * Option to disable default button
 * Having Authorize on component load
@@ -138,6 +138,17 @@ const App = () => {
 
 export default App
 ```
+
+**Using The API:**
+
+To use all Trello API features simply use `Trello` object, then chain the desired function to it. For more example on API options please read [Trello client.js API Reference](https://developers.trello.com/docs/clientjs#section-using-the-api).
+
+```js
+Trello.addCard({
+    url:'http://example.com'
+})
+```
+
 
 ## License 🔐
 
