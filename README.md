@@ -43,13 +43,13 @@ Latest version on **[NPM:](https://www.npmjs.com/package/react-trello-client)**
 Latest published version of
 the package JS bundle on NPM registery 
 -->
-<script src="https://cdn.jsdelivr.net/npm/react-trello-client/bundle/rtc.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-trello-client/bundle/react-trello-client.bundle.min.js"></script>
 
 <!-- 
 Latest published version of
 the package CSS bundle styles on NPM registery 
 -->
-<link rel="stylesheet" src="https://cdn.jsdelivr.net/npm/react-trello-client/bundle/rtc.bundle.min.css" />
+<link rel="stylesheet" src="https://cdn.jsdelivr.net/npm/react-trello-client/bundle/react-trello-client.bundle.min.css" />
 ```
 
 **Specific version:**
