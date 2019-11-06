@@ -30,6 +30,46 @@ Install via [Yarn](https://yarnpkg.com/en/docs/install):
 $ yarn add react-trello-client
 ```
 
+## CDN 🌐
+
+You can use CDN version of the package just with a simple script tag and, also, CSS link if you want to use the default styles:
+
+**Latest version:**
+
+Latest version on **[NPM:](https://www.npmjs.com/package/react-trello-client)**
+
+```html
+<!-- 
+Latest published version of
+the package JS bundle on NPM registery 
+-->
+<script src="https://cdn.jsdelivr.net/npm/react-trello-client/bundle/rtc.bundle.min.js"></script>
+
+<!-- 
+Latest published version of
+the package CSS bundle styles on NPM registery 
+-->
+<link rel="stylesheet" src="https://cdn.jsdelivr.net/npm/react-trello-client/bundle/rtc.bundle.min.css" />
+```
+
+**Specific version:**
+
+Using a specific version is available too:
+
+```html
+<!-- 
+Specific version of the package JS bundle 
+on NPM registery 
+-->
+<script src="https://cdn.jsdelivr.net/npm/react-trello-client@version/bundle/react-trello-client.bundle.min.js"></script>
+
+<!-- 
+Specific version of the package CSS bundle styles 
+on NPM registery 
+-->
+<link rel="stylesheet" src="https://cdn.jsdelivr.net/npm/react-trello-client@version/bundle/react-trello-client.bundle.min.css" />
+```
+
 ## Props ⚙
 
 You can pass available options as props to the main component. See [Usage](#usage-) or view on [Codesandbox](https://codesandbox.io/s/zealous-liskov-merlq?fontsize=14&module=%2Fsrc%2Fcomponents%2FApp%2FApp.js).
