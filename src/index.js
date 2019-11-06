@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+/* develblock:start */
 import TrelloButton from './components/TrelloButton';
+/* develblock:end */
 
 const TrelloClient = (props) => {
 
