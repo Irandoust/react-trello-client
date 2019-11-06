@@ -16,6 +16,7 @@ This is a simple and lightweight React plugin to have a clean Trello client with
 * Callback functions as props
 * Clean and well optimized code
 * Well documented options
+* Global Trello object to use API features
 
 ## Install 💻
 Simply run the following commands depending on which package manager you are using.
@@ -181,9 +182,12 @@ export default App
 
 **Using The API:**
 
-To use all Trello API features simply use `Trello` object, then chain the desired function to it. For more example on API options please read [Trello client.js API Reference](https://developers.trello.com/docs/clientjs#section-using-the-api).
+To use all Trello API features simply import `Trello` object as a const, then chain the desired method. For more examples on API options please read [Trello client.js API Reference](https://developers.trello.com/docs/clientjs#section-using-the-api).
 
-```js
+```jsx
+import React from 'react'
+import TrelloClient, { Trello } from 'react-trello-client'
+
 Trello.addCard({
     url:'http://example.com'
 })
