@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import TrelloButton from './components/TrelloButton';
 /* develblock:end */
 
+let Trello = {};
+
 const TrelloClient = (props) => {
 
     let authorizeButtonElement = null;
@@ -135,7 +137,7 @@ const TrelloClient = (props) => {
             return [path, params, success, error];
         }
 
-        const Trello = {
+        Trello = {
             version() {
                 return version;
             },
@@ -525,6 +527,10 @@ TrelloClient.propTypes = {
     autoAuthorize: PropTypes.bool,
     authorizeButton: PropTypes.bool,
     buttonCustomStyles: PropTypes.object
+}
+
+export {
+    Trello
 }
 
 export default TrelloClient;
