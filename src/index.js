@@ -106,10 +106,10 @@ const TrelloClient = (props) => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(restOptions.data),
+                body: restOptions.type === 'GET' ? null : JSON.stringify(restOptions.data)
             })
-                .then(response => response.json())
-                .catch(error => error.json())
+                .then(response => response)
+                .catch(error => error)
         }
 
         const authorizeURL = function (args) {
