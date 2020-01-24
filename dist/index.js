@@ -170,11 +170,11 @@ var TrelloClient = function TrelloClient(props) {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(restOptions.data)
+                body: restOptions.type === 'GET' ? null : JSON.stringify(restOptions.data)
             }).then(function (response) {
-                return response.json();
+                return response;
             }).catch(function (error) {
-                return error.json();
+                return error;
             });
         };
 
