@@ -100,16 +100,11 @@ const TrelloClient = (props) => {
 
         }
 
-        const ajax = function (restOptions) {
-            return fetch(restOptions.url, {
-                method: restOptions.type,
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: restOptions.type === 'GET' ? null : JSON.stringify(restOptions.data)
-            })
-                .then(response => response)
-                .catch(error => error)
+        const ajax = (restOptions) => {
+            return fetch(restOptions.url, restOptions.options)
+            .then(response => response.json())
+            .then(data => restOptions.success(data))
+            .catch(error => restOptions.error(error))
         }
 
         const authorizeURL = function (args) {
@@ -169,27 +164,39 @@ const TrelloClient = (props) => {
             // error - Function to call when the request fails
             rest(method, ...args) {
                 const [path, params, success, error] = parseRestArgs(args);
-
-                const restOpts = {
-                    url: `${baseURL}${path}`,
-                    type: method,
-                    data: {},
-                    dataType: 'json',
+                var restOpts = {
+                    url: '' + baseURL + path + '?',
+                    options: {
+                        method,
+                        mode: 'cors',
+                        referrerPolicy: 'no-referrer',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json',
+                        },
+                    },
                     success,
-                    error,
+                    error
+                    // Only include the key if it's been set to something truthy
+                }
+
+                // Only include body if method is not GET
+                if (method != 'GET') {
+                    restOpts.options.body = {}
                 }
 
                 // Only include the key if it's been set to something truthy
                 if (key) {
-                    restOpts.data.key = key;
+                    restOpts.url = `${restOpts.url}&key=${key}`
                 }
+
                 // Only include the token if it's been set to something truthy
                 if (token) {
-                    restOpts.data.token = token;
+                    restOpts.url = `${restOpts.url}&token=${token}`
                 }
 
                 if (params != null) {
-                    extend(restOpts.data, params);
+                    extend(restOpts.options.body, params);
                 }
 
                 return ajax(restOpts);
@@ -465,7 +472,6 @@ const TrelloClient = (props) => {
         }
 
         window.Trello = Trello;
-
         const { localStorage } = window;
 
         if (localStorage != null) {
