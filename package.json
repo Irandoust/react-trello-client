@@ -1,6 +1,6 @@
 {
   "name": "react-trello-client",
-  "version": "1.1.4",
+  "version": "1.1.6",
   "description": "\"This is a simple and lightweight React plugin to have a clean Trello client without using jQuery or any other additional libraries.\"",
   "main": "dist/index.js",
   "scripts": {

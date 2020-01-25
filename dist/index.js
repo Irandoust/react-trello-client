@@ -165,16 +165,12 @@ var TrelloClient = function TrelloClient(props) {
         };
 
         var ajax = function ajax(restOptions) {
-            return fetch(restOptions.url, {
-                method: restOptions.type,
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: restOptions.type === 'GET' ? null : JSON.stringify(restOptions.data)
-            }).then(function (response) {
-                return response;
+            return fetch(restOptions.url, restOptions.options).then(function (response) {
+                return response.json();
+            }).then(function (data) {
+                return restOptions.success(data);
             }).catch(function (error) {
-                return error;
+                return restOptions.error(error);
             });
         };
 
@@ -251,24 +247,38 @@ var TrelloClient = function TrelloClient(props) {
                     error = _parseRestArgs2[3];
 
                 var restOpts = {
-                    url: '' + baseURL + path,
-                    type: method,
-                    data: {},
-                    dataType: 'json',
+                    url: '' + baseURL + path + '?',
+                    options: {
+                        method: method,
+                        mode: 'cors',
+                        referrerPolicy: 'no-referrer',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        }
+                    },
                     success: success,
                     error: error
-
                     // Only include the key if it's been set to something truthy
-                };if (_key) {
-                    restOpts.data.key = _key;
+
+
+                    // Only include body if method is not GET
+                };if (method != 'GET') {
+                    restOpts.options.body = {};
                 }
+
+                // Only include the key if it's been set to something truthy
+                if (_key) {
+                    restOpts.url = restOpts.url + '&key=' + _key;
+                }
+
                 // Only include the token if it's been set to something truthy
                 if (_token) {
-                    restOpts.data.token = _token;
+                    restOpts.url = restOpts.url + '&token=' + _token;
                 }
 
                 if (params != null) {
-                    extend(restOpts.data, params);
+                    extend(restOpts.options.body, params);
                 }
 
                 return ajax(restOpts);
@@ -543,7 +553,6 @@ var TrelloClient = function TrelloClient(props) {
         }
 
         window.Trello = Trello;
-
         var localStorage = window.localStorage;
 
 
